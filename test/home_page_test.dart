@@ -94,7 +94,7 @@ void main() {
     expect(rect.bottom, lessThanOrEqualTo(360));
   },
       // TODO(Step 6): set to false when your full screen is built.
-      skip: true);
+      skip: false);
 
   // Reload: 3 taps, then r -> still 3.
   // A host test cannot press r, so we rebuild the same widget tree, which is
@@ -114,7 +114,7 @@ void main() {
     expect(find.text('Likes: 3'), findsOneWidget);
   },
       // TODO(Step 7): set to false when you have done the r / R experiment.
-      skip: true);
+      skip: false);
 
   // Reload: then R -> back to 0.
   // Hot restart throws the old widget tree (and its State) away and runs
@@ -133,7 +133,7 @@ void main() {
     expect(find.text('Likes: 0'), findsOneWidget);
   },
       // TODO(Step 7): set to false when you have done the r / R experiment.
-      skip: true);
+      skip: false);
 
   // Failure: Close emulator, flutter run -> "No device found" message.
   // This case is about the flutter tool, not the app, so it cannot be a
